@@ -19,7 +19,10 @@
     "angular-spinner": "^1.0.1",
     "angular-ui-router": "^1.0.3",
     "angulartics-google-analytics": "^0.4.0",
+    "autoprefixer": "^7.2.4",
     "d3": "^4.12.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
     "jquery": "^3.2.1",
     "karma": "^1.7.1",
     "leaflet.markercluster": "^1.2.0",
@@ -31,10 +34,13 @@
     "rangeslider": "^1.0.0",
     "rangeslider.js": "^2.3.2",
     "replace": "^0.3.0",
-    "restangular": "^1.6.1"
+    "restangular": "^1.6.1",
+    "webpack-dev-server": "^2.10.1"
   },
   "scripts": {
-    "dev": "gulp serve"
+    "dev": "gulp serve",
+    "server": "webpack-dev-server --history-api-fallback --inline --progress",
+    "start": "npm run server"
   },
   "devDependencies": {
     "browser-sync": "~2.1.4",
