@@ -184,8 +184,8 @@ a{
     color: $secondary_color_light;
   }
 }
-a.md-button, a.md-default-theme,
-button.md-button, button.md-default-theme{
+a.md-button, a,
+button.md-button, button{
   color: $terciary_color;
 }
 
@@ -235,7 +235,7 @@ div[api-key]{
   }
 }
 
-md-tabs.md-default-theme .md-header{
+md-tabs .md-header{
   background-color: $background_blue_dark_menu;
 }
 
@@ -280,7 +280,7 @@ md-tabs.md-default-theme .md-header{
     font-size: 14px;
   }
 
-  .md-button.md-default-theme.navbar_highlight_button {
+  .md-button.navbar_highlight_button {
     border: 2px solid #00FFA8;
     color: #00FFA8;
     border-radius: 50px;
@@ -305,7 +305,7 @@ md-tabs.md-default-theme .md-header{
   }
 
   .md-button.full_height {
-    padding: 24px 10px;
+    padding: 14px 10px;
   }
 
   .nav_left {
@@ -320,22 +320,17 @@ md-tabs.md-default-theme .md-header{
   }
 
   .nav_right {
-    width: 281px;
-    margin: 0px 16px;
 
     .get {
     }
     .log {
     }
     .navbar_signup_button {
-      text-align: center;
-      margin-left: 8px;
 
-      .md-button.md-default-theme {
+      .md-button {
         border: 2px solid #00FFA8;
         color: #00FFA8;
         border-radius: 50px;
-        padding: 9px 11px;
         width: 79px;
       }
     }
@@ -430,14 +425,8 @@ md-select,
 md-select-menu {
   text-transform: uppercase;
 }
-md-select.md-default-theme:not([disabled]):focus .md-select-label {
+md-select:not([disabled]):focus .md-select-label {
   border-bottom-color: #6B868D;
-}
-
-md-content.md-default-theme {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  position: relative;
 }
 
 md-toolbar{
@@ -446,17 +435,17 @@ md-toolbar{
   height: 64px;
 }
 
-.md-button.md-default-theme.md-flat.md-primary {
+.md-button.md-flat.md-primary {
   background-color: $terciary_color;
   color: white;
 }
 
-.md-button.md-default-theme.md-primary.md-flat:not([disabled]):hover {
+.md-button.md-primary.md-flat:not([disabled]):hover {
   background-color: $terciary_color;
   color: white;
 }
 
-.md-button.md-default-theme.md-primary.md-flat:not([disabled]):focus {
+.md-button.md-primary.md-flat:not([disabled]):focus {
   background-color: $terciary_color;
   color: white;
 }
@@ -464,7 +453,7 @@ md-toolbar{
 md-dialog.md-primary-theme {
   background-color: white;
 }
-md-dialog.md-default-theme {
+md-dialog {
   background-color: rgba(255, 0, 0, 0);
   box-shadow: 0px 0px 0px 0px transparent;
   max-height: 100%;
@@ -474,7 +463,7 @@ md-dialog-content {
   background-color: white;
 }
 
-md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused {
+md-input-container:not(.md-input-invalid).md-input-focused {
   label {
     color: $terciary_color;
   }
@@ -558,7 +547,7 @@ md-checkbox .md-label span {
  *  SPINNER/PROGRESS BAR COMPONENTS
  */
 
-md-progress-linear.md-default-theme .md-bar{
+md-progress-linear .md-bar{
   background-color: #044150;
 }
 
@@ -589,7 +578,7 @@ md-progress-linear.md-default-theme .md-bar{
 
 // Popup backdrop
 
-md-backdrop.md-opaque.md-default-theme {
+md-backdrop.md-opaque {
   background-color: rgba(30, 30, 30, 0.6);
 }
 
@@ -805,7 +794,7 @@ section.map {
     height: 12px;
   }
 }
-.md-button.md-default-theme.map_filter_button:hover, .md-button.md-default-theme.map_filter_button:focus {
+.md-button.map_filter_button:hover, .md-button.map_filter_button:focus {
   background-color: white;
 }
 
@@ -959,8 +948,7 @@ section .kit_menu {
       height: 14px;
     }
 
-    .md-button.md-default-theme {
-      display: inline-table;
+    .md-button {
       width: 30px;
       padding: 0 10px;
       border-radius: 0
@@ -1102,10 +1090,10 @@ section .kit_menu {
       background-color: #010E12;
     }
 
-    md-select.md-default-theme:not([disabled]):focus .md-select-label {
+    md-select:not([disabled]):focus .md-select-label {
       color: $font_color_white;
     }
-    md-select.md-default-theme .md-select-label.md-placeholder {
+    md-select .md-select-label.md-placeholder {
       color: $font_color_white;
     }
 
@@ -1119,7 +1107,7 @@ section .kit_menu {
         margin-right: 30px;
         height: 100%;
 
-        md-select.md-default-theme .md-select-label {
+        md-select .md-select-label {
           border-bottom-color: #6B868D;
         }
         .sensor_select {
@@ -1496,10 +1484,10 @@ KIT COMMENTS MODULE
   left: 0;
   bottom: 4px;
 }
-md-progress-linear.md-default-theme.md-hue-3 .md-container{
+md-progress-linear.md-hue-3 .md-container{
   background-color: rgba(79, 201, 232, 0.05);
 }
-md-progress-linear.md-default-theme.md-hue-3 .md-bar {
+md-progress-linear.md-hue-3 .md-bar {
   background-color: $blue_light;
 }
 .chart_spinner {
@@ -1589,8 +1577,8 @@ md-progress-linear.md-default-theme.md-hue-3 .md-bar {
 }
 
 section .stickMenu {
-  position: fixed;
-  top: 64px;
+  position: absolute;
+//  top: 64px;
 }
 
 /*
@@ -1610,7 +1598,6 @@ section .stickMenu {
     margin-top:.5em;
   }
 
-  border: 0.5px solid grey;
   position: relative;
   border-radius: 0px 0px 3px 3px;
 
@@ -1629,21 +1616,11 @@ section .stickMenu {
 
   .close_icon {
     float: right;
-    width: 14px;
-    height: 14px;
     margin: 12px;
-
-    md-icon {
-      width: 14px;
-      height: 14px;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-    }
   }
 
   button.main {
-    width: 100%;
+    width: 97%;
     color: $font_color_white;
     background-color: $terciary_color;
     height: 64px;
@@ -1689,50 +1666,17 @@ section .stickMenu {
   }
 }
 
-.message_below {
-  text-align: center;
-  font-size: 16px;
-
-  .message_below_question {
-    color: $font_color_white;
-    margin-right: 3%;
-    font-size: 14px;
-  }
-
-  .message_below_link {
-    color: $terciary_color;
-    font-weight: bold;
-    margin-right: 15px;
-  }
-}
 
 /*
   MODAL FOR LOGIN
  */
 
-.modal_login {
-  width: 400px;
+.message_below{
+  background: white;
+  margin:0;
+  padding: 5px 15px;
+  border-bottom: 1px solid #ddd;
 }
-.login_spinner {
-  position: absolute;
-  top: 45%;
-  left: 45%;
-}
-
-/*
-  MODAL FOR SIGNUP
-*/
-
-.signup {
-  width: 400px;
-  height: 512px;
-}
-.signup_spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
 /*
   MODAL FOR MAP FILTER
 */
@@ -1743,18 +1687,12 @@ md-dialog.tags, md-dialog.filters{
   min-height:357px;
 
   .close_icon{
+    padding-top:10px;
     float:none;
     position:absolute;
     right:0
   }
 
-  md-content{
-    padding: 0;
-  }
-
-  md-button.main{
-
-  }
 }
 
 .modal_mapFilter, .modal_tagFilter {
@@ -1806,18 +1744,9 @@ md-dialog.tags, md-dialog.filters{
 }
 
 .modal_tagFilter {
-  width:650px;
+  width: calc(50vw + 90px);
   height: calc(100vh + 300px);
 }
-
-.modalTag_tagContainer{
-  .md-default-theme{
-    .md-label{
-      border: none;
-    }
-  }
-}
-
 
 /*
   MODAL RECOVERY PASSWORD
@@ -2707,13 +2636,13 @@ md-dialog.tags, md-dialog.filters{
   md-tab md-tab-label {
     overflow: visible;
   }
-  md-tabs.md-default-theme md-tab {
+  md-tabs md-tab {
     color: $font_color_blue_grey;
   }
-  md-tabs.md-default-theme md-tab.active {
+  md-tabs md-tab.active {
     color: white;
   }
-  md-tabs.md-default-theme md-tabs-ink-bar {
+  md-tabs md-tabs-ink-bar {
     color: $blue_light;
     background-color: $blue_light;
   }
@@ -2809,7 +2738,7 @@ md-dialog.tags, md-dialog.filters{
 .md-button.myProfile_apiKey_refreshButton {
   border-radius: 0 4px 4px 0;
 }
-.md-button.md-default-theme.myProfile_apiKey_refreshButton:active, .md-button.md-default-theme.myProfile_apiKey_refreshButton:hover, .md-button.md-default-theme.myProfile_apiKey_refreshButton:focus {
+.md-button.myProfile_apiKey_refreshButton:active, .md-button.myProfile_apiKey_refreshButton:hover, .md-button.myProfile_apiKey_refreshButton:focus {
   background-color: $font_color_blue_grey;
 }
 .myProfile_form_removeButton {
@@ -2835,17 +2764,17 @@ md-dialog.tags, md-dialog.filters{
   margin-bottom: 10px;
 }
 
-.md-button.md-default-theme.myProfile_addKitButton,
-.md-button.md-default-theme.call-to-action {
+.md-button.myProfile_addKitButton,
+.md-button.call-to-action {
   color: white;
   background-color: $blue_light;
   border-radius: 20px;
   padding: 8px 31px;
 }
-.md-button.md-default-theme.myProfile_addKitButton:focus {
+.md-button.myProfile_addKitButton:focus {
   background-color: $blue_light;
 }
-.md-button.md-default-theme.myProfile_addKitButton:hover {
+.md-button.myProfile_addKitButton:hover {
   background-color: $blue_light;
 }
 .myProfile_content_main_title {
@@ -3186,7 +3115,7 @@ button.doorbell-button {
     margin-bottom: 0.2em;
   }
 
-  .md-button.md-default-theme.md-primary.md-raised, .md-button.md-default-theme.md-primary.md-fab{
+  .md-button.md-primary.md-raised, .md-button.md-primary.md-fab{
     padding: 6px 20px;
     height: 44px;
     border-radius: 22px;
@@ -3203,7 +3132,7 @@ button.doorbell-button {
     }
   }
 
-  .md-button.md-default-theme.md-primary{
+  .md-button.md-primary{
     color: $blue_light;
   }
 
@@ -3446,6 +3375,7 @@ p.no-margin {
     }
 
     .container {
+      padding-bottom:20px;
         padding-right: 15px;
         padding-left: 15px;
         margin-right: auto;
@@ -3606,7 +3536,7 @@ p.no-margin {
         font-size: .8em;
     }
 
-    .md-button.md-default-theme {
+    .md-button {
         &:hover, &:active {
             text-decoration: none !important;
         }
@@ -4013,11 +3943,6 @@ p.no-margin {
 
     .row-pad-main {
         padding: 30px 20px 45px 20px;
-    }
-
-    .container {
-        width: 960px;
-        position: relative;
     }
 
     .news-widget {
