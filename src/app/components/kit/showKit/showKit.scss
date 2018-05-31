@@ -210,32 +210,44 @@ section .kit_menu {
 .kit_overview {
   width: 100%;
   height: 96px;
-  z-index: $medium_priority;
   background-color: $grey_lightest;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  z-index: $medium_priority;
   position: relative;
 
   .button_scroll {
-    margin: 0px;
-    position: absolute;
-    top: 0;
     width: 60px;
-    height: 96px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    background: $grey_lightest;
+    margin: 0;
+    // margin: 0;
+    // position: absolute;
+    // top: 0;
+    // width: 60px;
+    // height: 100%;
   }
 
   .button_scroll_left {
-    left: 0;
+    // left: 0;
   }
 
   .button_scroll_right {
-    right: 0;
+    // right: 0;
   }
 
   .sensors_container {
-    width: 90%;
-    height: 96px;
-    margin: 0 auto;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    // width is 100% - width of scroll buttons
+    // - width of margin in scroll buttons
+    width: calc(100% - 120px);
   }
 
   @media (pointer: coarse) {
@@ -244,13 +256,38 @@ section .kit_menu {
     }
   }
 
+  .sensors-flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  .sensor-item {
+    padding: 0 20px;
+
+    .sensor_container:first-child & {
+      padding-left: 0;
+    }
+
+    .sensor_container:last-child & {
+      padding-right: 0;
+    }
+  }
+
   .sensor_container {
-    margin: 30px;
-    position: relative;
     color: $grey_darker;
-    display: inline-table;
     cursor: pointer;
     text-align: center;
+    -ms-flex-item-align: center;
+    align-self: center;
 
     small{
       font-size: 0.8em;
@@ -424,7 +461,8 @@ section .kit_menu {
             border-radius: 2px;
             line-height: 1.5em;
             padding: 10px;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+            -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+                    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
           }
         }
         .sensor_data {
@@ -451,16 +489,14 @@ section .kit_menu {
           display: none;
           position: absolute;
           -webkit-transform: translate(5px, 5px);
-          -moz-transform: translate(5px, 5px);
-          -ms-transform: translate(5px, 5px);
-          -o-transform: translate(5px, 5px);
           transform: translate(5px, 5px);
           background-color: rgba(255, 255, 255, 0.8);
           color: $background_blue_dark_chart;
           border-radius: 2px;
           line-height: 1.5em;
           padding: 4px 6px;
-          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+          -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+                  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
           max-width: 175px;
         }
         .sensor_compare {
@@ -500,6 +536,8 @@ section .kit_menu {
               margin: -2px;
               width: 40px;
               height: 28px;
+              display: -webkit-inline-box;
+              display: -ms-inline-flexbox;
               display: inline-flex;
               border: 1px solid $grey_darker;
             }
